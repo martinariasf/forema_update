@@ -1,0 +1,808 @@
+2023-06-12 20:47:49  INFO: Operating system name: Linux version: 5.10.0-21-cloud-amd64 architecture: amd64
+2023-06-12 20:47:50  INFO: Java runtime name: OpenJDK 64-Bit Server VM vendor: Debian version: 11.0.18+10-post-Debian-1deb11u1
+2023-06-12 20:47:50  INFO: Memory limit heap: 121mb non-heap: 0mb
+2023-06-12 20:47:50  INFO: Character encoding: UTF-8 charset: UTF-8
+2023-06-12 20:47:50  INFO: Version: 5.8
+2023-06-12 20:47:50  INFO: Starting server...
+2023-06-12 20:47:50  INFO: HikariPool-1 - Starting...
+2023-06-12 20:47:51  INFO: HikariPool-1 - Added connection conn0: url=jdbc:h2:./data/database user=SA
+2023-06-12 20:47:51  INFO: HikariPool-1 - Start completed.
+2023-06-12 20:47:51  INFO: Set default schema name to PUBLIC
+2023-06-12 20:47:51  INFO: Clearing database change log checksums
+2023-06-12 20:47:51  INFO: Successfully acquired change log lock
+2023-06-12 20:47:52  INFO: Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2023-06-12 20:47:52  INFO: Successfully released change log lock
+2023-06-12 20:47:52  INFO: Successfully acquired change log lock
+2023-06-12 20:47:54  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-12 20:47:55  INFO: Using deploymentId: 6602874394
+2023-06-12 20:47:55  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-12 20:47:55  INFO: Table tc_attributes created
+2023-06-12 20:47:55  INFO: Table tc_calendars created
+2023-06-12 20:47:55  INFO: Table tc_commands created
+2023-06-12 20:47:55  INFO: Table tc_device_attribute created
+2023-06-12 20:47:55  INFO: Table tc_device_command created
+2023-06-12 20:47:55  INFO: Table tc_device_driver created
+2023-06-12 20:47:55  INFO: Table tc_device_geofence created
+2023-06-12 20:47:55  INFO: Table tc_device_maintenance created
+2023-06-12 20:47:55  INFO: Table tc_device_notification created
+2023-06-12 20:47:55  INFO: Table tc_devices created
+2023-06-12 20:47:55  INFO: Table tc_drivers created
+2023-06-12 20:47:55  INFO: Table tc_events created
+2023-06-12 20:47:55  INFO: Table tc_geofences created
+2023-06-12 20:47:55  INFO: Table tc_group_attribute created
+2023-06-12 20:47:55  INFO: Table tc_group_command created
+2023-06-12 20:47:55  INFO: Table tc_group_driver created
+2023-06-12 20:47:55  INFO: Table tc_group_geofence created
+2023-06-12 20:47:55  INFO: Table tc_group_maintenance created
+2023-06-12 20:47:55  INFO: Table tc_group_notification created
+2023-06-12 20:47:55  INFO: Table tc_groups created
+2023-06-12 20:47:55  INFO: Table tc_maintenances created
+2023-06-12 20:47:55  INFO: Table tc_notifications created
+2023-06-12 20:47:55  INFO: Table tc_positions created
+2023-06-12 20:47:55  INFO: Table tc_servers created
+2023-06-12 20:47:55  INFO: Table tc_statistics created
+2023-06-12 20:47:55  INFO: Table tc_user_attribute created
+2023-06-12 20:47:55  INFO: Table tc_user_calendar created
+2023-06-12 20:47:55  INFO: Table tc_user_command created
+2023-06-12 20:47:55  INFO: Table tc_user_device created
+2023-06-12 20:47:55  INFO: Table tc_user_driver created
+2023-06-12 20:47:55  INFO: Table tc_user_geofence created
+2023-06-12 20:47:55  INFO: Table tc_user_group created
+2023-06-12 20:47:55  INFO: Table tc_user_maintenance created
+2023-06-12 20:47:55  INFO: Table tc_user_notification created
+2023-06-12 20:47:55  INFO: Table tc_user_user created
+2023-06-12 20:47:55  INFO: Table tc_users created
+2023-06-12 20:47:55  INFO: Foreign key constraint added to tc_device_command (commandid)
+2023-06-12 20:47:55  INFO: Foreign key constraint added to tc_device_command (deviceid)
+2023-06-12 20:47:55  INFO: Foreign key constraint added to tc_device_driver (deviceid)
+2023-06-12 20:47:55  INFO: Foreign key constraint added to tc_device_driver (driverid)
+2023-06-12 20:47:55  INFO: Foreign key constraint added to tc_device_geofence (deviceid)
+2023-06-12 20:47:55  INFO: Foreign key constraint added to tc_device_geofence (geofenceid)
+2023-06-12 20:47:55  INFO: Foreign key constraint added to tc_device_maintenance (deviceid)
+2023-06-12 20:47:55  INFO: Foreign key constraint added to tc_device_maintenance (maintenanceid)
+2023-06-12 20:47:55  INFO: Foreign key constraint added to tc_device_notification (deviceid)
+2023-06-12 20:47:55  INFO: Foreign key constraint added to tc_device_notification (notificationid)
+2023-06-12 20:47:55  INFO: Foreign key constraint added to tc_devices (groupid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_events (deviceid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_geofences (calendarid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_attribute (attributeid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_attribute (groupid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_command (commandid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_command (groupid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_driver (driverid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_driver (groupid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_geofence (geofenceid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_geofence (groupid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_maintenance (groupid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_maintenance (maintenanceid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_notification (groupid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_notification (notificationid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_notifications (calendarid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_positions (deviceid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_attribute (attributeid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_attribute (userid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_calendar (calendarid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_calendar (userid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_command (commandid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_command (userid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_device_attribute (attributeid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_device_attribute (deviceid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_device (deviceid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_device (userid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_driver (driverid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_driver (userid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_geofence (geofenceid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_geofence (userid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_group (groupid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_group (userid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_maintenance (maintenanceid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_maintenance (userid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_notification (notificationid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_notification (userid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_user (userid)
+2023-06-12 20:47:56  INFO: New row inserted into tc_servers
+2023-06-12 20:47:56  INFO: ChangeSet changelog-4.0-clean::changelog-4.0-clean::author ran successfully in 559ms
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_groups (groupid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_user (manageduserid)
+2023-06-12 20:47:56  INFO: ChangeSet changelog-4.0-clean::changelog-4.0-clean-common::author ran successfully in 12ms
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.3::changelog-3.3::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.5::changelog-3.5::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.6::changelog-3.6::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.7::changelog-3.7::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.7::changelog-3.7-notmssql::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.8::changelog-3.8::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.9::changelog-3.9::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.10::changelog-3.10::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.10::changelog-3.10-notmssql::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.10::changelog-3.10-mssql::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.10::changelog-3.7-mssql::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.11::changelog-3.11::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.12::changelog-3.12::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.12::changelog-3.12-notmssql::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.12::changelog-3.12-pgsql::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.14::changelog-3.14::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.15::changelog-3.15::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.16::changelog-3.16::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.17::changelog-3.3-admin::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-3.17::changelog-3.17::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-4.0::changelog-4.0-pre::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-4.0::changelog-4.0-common::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-4.0::changelog-4.0-pg::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-4.0::changelog-4.0::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-4.0::changelog-4.0-renaming::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : Not precondition failed
+
+2023-06-12 20:47:56  INFO: Marking ChangeSet: "changelog-4.1::changelog-4.1-mssql::author" as ran despite precondition failure due to onFail='MARK_RAN': 
+          schema/changelog-master.xml : DBMS Precondition failed: expected mssql, got h2
+
+2023-06-12 20:47:56  INFO: Index user_device_user_id created
+2023-06-12 20:47:56  INFO: Index position_deviceid_fixtime created
+2023-06-12 20:47:56  INFO: ChangeSet changelog-4.7::changelog-4.7::author ran successfully in 156ms
+2023-06-12 20:47:56  INFO: Index event_deviceid_servertime created
+2023-06-12 20:47:56  INFO: ChangeSet changelog-4.9::changelog-4.9::author ran successfully in 4ms
+2023-06-12 20:47:56  INFO: Columns protocols(VARCHAR(4096)) added to tc_statistics
+2023-06-12 20:47:56  INFO: ChangeSet changelog-4.10::changelog-4.10::author ran successfully in 20ms
+2023-06-12 20:47:56  INFO: Columns announcement(VARCHAR(4000)) added to tc_servers
+2023-06-12 20:47:56  INFO: ChangeSet changelog-4.11::changelog-4.11::author ran successfully in 6ms
+2023-06-12 20:47:56  INFO: Column tc_events.servertime renamed to eventtime
+2023-06-12 20:47:56  INFO: ChangeSet changelog-4.13::changelog-4.13::author ran successfully in 4ms
+2023-06-12 20:47:56  INFO: Table tc_orders created
+2023-06-12 20:47:56  INFO: Table tc_user_order created
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_order (userid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_user_order (orderid)
+2023-06-12 20:47:56  INFO: Table tc_group_order created
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_order (groupid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_group_order (orderid)
+2023-06-12 20:47:56  INFO: Table tc_device_order created
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_device_order (deviceid)
+2023-06-12 20:47:56  INFO: Foreign key constraint added to tc_device_order (orderid)
+2023-06-12 20:47:56  INFO: ChangeSet changelog-4.15::changelog-4.15::author ran successfully in 48ms
+2023-06-12 20:47:56  INFO: Columns disablereports(BOOLEAN) added to tc_servers
+2023-06-12 20:47:56  INFO: Columns disablereports(BOOLEAN) added to tc_users
+2023-06-12 20:47:56  INFO: Column tc_orders.toAddress renamed to toaddresstmp
+2023-06-12 20:47:56  INFO: Column tc_orders.fromAddress renamed to fromaddresstmp
+2023-06-12 20:47:56  INFO: Column tc_orders.toaddresstmp renamed to toaddress
+2023-06-12 20:47:56  INFO: Column tc_orders.fromaddresstmp renamed to fromaddress
+2023-06-12 20:47:56  INFO: ChangeSet changelog-5.0::changelog-5.0::author ran successfully in 45ms
+2023-06-12 20:47:56  INFO: Index idx_drivers_uniqueid created
+2023-06-12 20:47:56  INFO: Index idx_devices_uniqueid created
+2023-06-12 20:47:56  INFO: Index idx_users_email created
+2023-06-12 20:47:56  INFO: Index idx_users_login created
+2023-06-12 20:47:56  INFO: Index idx_users_token created
+2023-06-12 20:47:56  INFO: Columns overlayurl(VARCHAR(512)) added to tc_servers
+2023-06-12 20:47:56  INFO: ChangeSet changelog-5.1::changelog-5.1::author ran successfully in 15ms
+2023-06-12 20:47:56  INFO: Columns status(CHAR(8)) added to tc_devices
+2023-06-12 20:47:56  INFO: Columns geofenceids(VARCHAR(128)) added to tc_devices
+2023-06-12 20:47:56  INFO: ChangeSet changelog-5.2::changelog-5.2::author ran successfully in 43ms
+2023-06-12 20:47:56  INFO: Columns fixedemail(BOOLEAN) added to tc_servers
+2023-06-12 20:47:56  INFO: Columns fixedemail(BOOLEAN) added to tc_users
+2023-06-12 20:47:56  INFO: Columns expirationtime(TIMESTAMP) added to tc_devices
+2023-06-12 20:47:56  INFO: Table tc_keystore created
+2023-06-12 20:47:56  INFO: Index idx_users_token dropped from table tc_users
+2023-06-12 20:47:56  INFO: Column tc_users.token dropped
+2023-06-12 20:47:56  INFO: ChangeSet changelog-5.3::changelog-5.3::author ran successfully in 85ms
+2023-06-12 20:47:57  INFO: Columns motionstate(BOOLEAN),motiontime(TIMESTAMP),motiondistance(DOUBLE),overspeedstate(BOOLEAN),overspeedtime(TIMESTAMP),overspeedgeofenceid(INT) added to tc_devices
+2023-06-12 20:47:57  INFO: Table tc_commands_queue created
+2023-06-12 20:47:57  INFO: Foreign key constraint added to tc_commands_queue (deviceid)
+2023-06-12 20:47:57  INFO: Index idx_commands_queue_deviceid created
+2023-06-12 20:47:57  INFO: ChangeSet changelog-5.4::changelog-5.4::author ran successfully in 113ms
+2023-06-12 20:47:57  INFO: Column tc_commands_queue.description dropped
+2023-06-12 20:47:57  INFO: ChangeSet changelog-5.5::changelog-5.5::author ran successfully in 11ms
+2023-06-12 20:47:57  INFO: Columns motionstreak(BOOLEAN) added to tc_devices
+2023-06-12 20:47:57  INFO: Table tc_reports created
+2023-06-12 20:47:57  INFO: Foreign key constraint added to tc_reports (calendarid)
+2023-06-12 20:47:57  INFO: Table tc_user_report created
+2023-06-12 20:47:57  INFO: Foreign key constraint added to tc_user_report (userid)
+2023-06-12 20:47:57  INFO: Foreign key constraint added to tc_user_report (reportid)
+2023-06-12 20:47:57  INFO: Table tc_group_report created
+2023-06-12 20:47:57  INFO: Foreign key constraint added to tc_group_report (groupid)
+2023-06-12 20:47:57  INFO: Foreign key constraint added to tc_group_report (reportid)
+2023-06-12 20:47:57  INFO: Table tc_device_report created
+2023-06-12 20:47:57  INFO: Foreign key constraint added to tc_device_report (deviceid)
+2023-06-12 20:47:57  INFO: Foreign key constraint added to tc_device_report (reportid)
+2023-06-12 20:47:57  INFO: ChangeSet changelog-5.6::changelog-5.6::author ran successfully in 54ms
+2023-06-12 20:47:57  INFO: Columns commandid(INT) added to tc_notifications
+2023-06-12 20:47:57  INFO: Foreign key constraint added to tc_notifications (commandid)
+2023-06-12 20:47:57  INFO: ChangeSet changelog-5.7::changelog-5.7::author ran successfully in 19ms
+2023-06-12 20:47:57  INFO: Column tc_devices.geofenceids dropped
+2023-06-12 20:47:57  INFO: Columns geofenceids(VARCHAR(128)) added to tc_positions
+2023-06-12 20:47:57  INFO: ChangeSet changelog-5.8::changelog-5.8::author ran successfully in 29ms
+2023-06-12 20:47:57  INFO: UPDATE SUMMARY
+2023-06-12 20:47:57  INFO: Run:                         43
+2023-06-12 20:47:57  INFO: Previously run:               0
+2023-06-12 20:47:57  INFO: Filtered out:                 0
+2023-06-12 20:47:57  INFO: -------------------------------
+2023-06-12 20:47:57  INFO: Total change sets:           43
+
+2023-06-12 20:47:57  INFO: Update summary generated
+2023-06-12 20:47:57  INFO: Update command completed successfully.
+2023-06-12 20:47:57  INFO: Successfully released change log lock
+2023-06-12 20:47:57  INFO: Successfully released change log lock
+2023-06-12 20:47:57  INFO: Command execution complete
+2023-06-12 20:47:59  INFO: jetty-10.0.15; built: 2023-04-11T17:25:14.480Z; git: 68017dbd00236bb7e187330d7585a059610f661d; jvm 11.0.18+10-post-Debian-1deb11u1
+2023-06-12 20:48:00  INFO: Started o.t.w.@3a6556b6{/,null,AVAILABLE}
+2023-06-12 20:48:00  INFO: Session workerName=node0
+2023-06-12 20:48:00  WARN: JAXBContext implementation could not be found. WADL feature is disabled.
+2023-06-12 20:48:01  INFO: Started o.e.j.s.ServletContextHandler@61c145cb{/,null,AVAILABLE}
+2023-06-12 20:48:01  INFO: Started ServerConnector@31f31b20{HTTP/1.1, (http/1.1)}{0.0.0.0:8082}
+2023-06-12 20:48:01  INFO: Started Server@12f8682a{STARTING}[10.0.15,sto=0] @13691ms
+2023-06-12 20:49:18  INFO: user: 0, action: create, object: user, id: 1
+2023-06-12 20:49:37  INFO: user: 1, action: login, from: 88.130.219.42
+2023-06-13 08:31:34  INFO: Operating system name: Linux version: 5.10.0-21-cloud-amd64 architecture: amd64
+2023-06-13 08:31:35  INFO: Java runtime name: OpenJDK 64-Bit Server VM vendor: Debian version: 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 08:31:35  INFO: Memory limit heap: 121mb non-heap: 0mb
+2023-06-13 08:31:35  INFO: Character encoding: UTF-8 charset: UTF-8
+2023-06-13 08:31:35  INFO: Version: 5.8
+2023-06-13 08:31:35  INFO: Starting server...
+2023-06-13 08:31:35  INFO: HikariPool-1 - Starting...
+2023-06-13 08:31:36  INFO: HikariPool-1 - Added connection conn0: url=jdbc:h2:./data/database user=SA
+2023-06-13 08:31:36  INFO: HikariPool-1 - Start completed.
+2023-06-13 08:31:36  INFO: Set default schema name to PUBLIC
+2023-06-13 08:31:36  INFO: Clearing database change log checksums
+2023-06-13 08:31:37  INFO: Successfully acquired change log lock
+2023-06-13 08:31:37  INFO: Successfully released change log lock
+2023-06-13 08:31:37  INFO: Successfully acquired change log lock
+2023-06-13 08:31:39  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 08:31:40  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 08:31:40  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 08:31:40  INFO: UPDATE SUMMARY
+2023-06-13 08:31:40  INFO: Run:                          0
+2023-06-13 08:31:40  INFO: Previously run:              43
+2023-06-13 08:31:40  INFO: Filtered out:                 0
+2023-06-13 08:31:40  INFO: -------------------------------
+2023-06-13 08:31:40  INFO: Total change sets:           43
+
+2023-06-13 08:31:40  INFO: Update summary generated
+2023-06-13 08:31:40  INFO: Successfully released change log lock
+2023-06-13 08:31:40  INFO: Successfully released change log lock
+2023-06-13 08:31:40  INFO: Command execution complete
+2023-06-13 08:31:43  INFO: jetty-10.0.15; built: 2023-04-11T17:25:14.480Z; git: 68017dbd00236bb7e187330d7585a059610f661d; jvm 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 08:31:43  INFO: Started o.t.w.@655203e3{/,null,AVAILABLE}
+2023-06-13 08:31:43  INFO: Session workerName=node0
+2023-06-13 08:31:44  WARN: JAXBContext implementation could not be found. WADL feature is disabled.
+2023-06-13 08:31:44  INFO: Started o.e.j.s.ServletContextHandler@15ad5acb{/,null,AVAILABLE}
+2023-06-13 08:31:44  INFO: Started ServerConnector@4703c998{HTTP/1.1, (http/1.1)}{0.0.0.0:8082}
+2023-06-13 08:31:44  INFO: Started Server@5d829ef0{STARTING}[10.0.15,sto=0] @12138ms
+2023-06-13 08:35:14  INFO: Stopping server...
+2023-06-13 08:39:13  INFO: Operating system name: Linux version: 5.10.0-21-cloud-amd64 architecture: amd64
+2023-06-13 08:39:13  INFO: Java runtime name: OpenJDK 64-Bit Server VM vendor: Debian version: 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 08:39:13  INFO: Memory limit heap: 121mb non-heap: 0mb
+2023-06-13 08:39:13  INFO: Character encoding: UTF-8 charset: UTF-8
+2023-06-13 08:39:13  INFO: Version: 5.8
+2023-06-13 08:39:13  INFO: Starting server...
+2023-06-13 08:39:13  INFO: HikariPool-1 - Starting...
+2023-06-13 08:39:14  INFO: HikariPool-1 - Added connection conn0: url=jdbc:h2:./data/database user=SA
+2023-06-13 08:39:14  INFO: HikariPool-1 - Start completed.
+2023-06-13 08:39:14  INFO: Set default schema name to PUBLIC
+2023-06-13 08:39:15  INFO: Clearing database change log checksums
+2023-06-13 08:39:15  INFO: Successfully acquired change log lock
+2023-06-13 08:39:15  INFO: Successfully released change log lock
+2023-06-13 08:39:15  INFO: Successfully acquired change log lock
+2023-06-13 08:39:17  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 08:39:18  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 08:39:18  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 08:39:18  INFO: UPDATE SUMMARY
+2023-06-13 08:39:18  INFO: Run:                          0
+2023-06-13 08:39:18  INFO: Previously run:              43
+2023-06-13 08:39:18  INFO: Filtered out:                 0
+2023-06-13 08:39:18  INFO: -------------------------------
+2023-06-13 08:39:18  INFO: Total change sets:           43
+
+2023-06-13 08:39:18  INFO: Update summary generated
+2023-06-13 08:39:18  INFO: Successfully released change log lock
+2023-06-13 08:39:18  INFO: Successfully released change log lock
+2023-06-13 08:39:18  INFO: Command execution complete
+2023-06-13 08:39:21  INFO: jetty-10.0.15; built: 2023-04-11T17:25:14.480Z; git: 68017dbd00236bb7e187330d7585a059610f661d; jvm 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 08:39:21  INFO: Started o.t.w.@655203e3{/,null,AVAILABLE}
+2023-06-13 08:39:21  INFO: Session workerName=node0
+2023-06-13 08:39:22  WARN: JAXBContext implementation could not be found. WADL feature is disabled.
+2023-06-13 08:39:23  INFO: Started o.e.j.s.ServletContextHandler@15ad5acb{/,null,AVAILABLE}
+2023-06-13 08:39:23  INFO: Started ServerConnector@4703c998{HTTP/1.1, (http/1.1)}{0.0.0.0:8082}
+2023-06-13 08:39:23  INFO: Started Server@5d829ef0{STARTING}[10.0.15,sto=0] @12420ms
+2023-06-13 08:39:44  INFO: Stopping server...
+2023-06-13 08:40:15  INFO: Operating system name: Linux version: 5.10.0-21-cloud-amd64 architecture: amd64
+2023-06-13 08:40:15  INFO: Java runtime name: OpenJDK 64-Bit Server VM vendor: Debian version: 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 08:40:15  INFO: Memory limit heap: 121mb non-heap: 0mb
+2023-06-13 08:40:15  INFO: Character encoding: UTF-8 charset: UTF-8
+2023-06-13 08:40:15  INFO: Version: 5.8
+2023-06-13 08:40:15  INFO: Starting server...
+2023-06-13 08:40:16  INFO: HikariPool-1 - Starting...
+2023-06-13 08:40:17  INFO: HikariPool-1 - Added connection conn0: url=jdbc:h2:./data/database user=SA
+2023-06-13 08:40:17  INFO: HikariPool-1 - Start completed.
+2023-06-13 08:40:17  INFO: Set default schema name to PUBLIC
+2023-06-13 08:40:17  INFO: Clearing database change log checksums
+2023-06-13 08:40:17  INFO: Successfully acquired change log lock
+2023-06-13 08:40:17  INFO: Successfully released change log lock
+2023-06-13 08:40:18  INFO: Successfully acquired change log lock
+2023-06-13 08:40:20  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 08:40:20  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 08:40:20  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 08:40:20  INFO: UPDATE SUMMARY
+2023-06-13 08:40:20  INFO: Run:                          0
+2023-06-13 08:40:20  INFO: Previously run:              43
+2023-06-13 08:40:20  INFO: Filtered out:                 0
+2023-06-13 08:40:20  INFO: -------------------------------
+2023-06-13 08:40:20  INFO: Total change sets:           43
+
+2023-06-13 08:40:20  INFO: Update summary generated
+2023-06-13 08:40:20  INFO: Successfully released change log lock
+2023-06-13 08:40:20  INFO: Successfully released change log lock
+2023-06-13 08:40:20  INFO: Command execution complete
+2023-06-13 08:40:23  INFO: jetty-10.0.15; built: 2023-04-11T17:25:14.480Z; git: 68017dbd00236bb7e187330d7585a059610f661d; jvm 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 08:40:23  INFO: Started o.t.w.@655203e3{/,null,AVAILABLE}
+2023-06-13 08:40:23  INFO: Session workerName=node0
+2023-06-13 08:40:24  WARN: JAXBContext implementation could not be found. WADL feature is disabled.
+2023-06-13 08:40:25  INFO: Started o.e.j.s.ServletContextHandler@15ad5acb{/,null,AVAILABLE}
+2023-06-13 08:40:25  INFO: Started ServerConnector@4703c998{HTTP/1.1, (http/1.1)}{0.0.0.0:8082}
+2023-06-13 08:40:25  INFO: Started Server@5d829ef0{STARTING}[10.0.15,sto=0] @11574ms
+2023-06-13 08:40:31  INFO: Stopping server...
+2023-06-13 09:19:46  INFO: Operating system name: Linux version: 5.10.0-21-cloud-amd64 architecture: amd64
+2023-06-13 09:19:46  INFO: Java runtime name: OpenJDK 64-Bit Server VM vendor: Debian version: 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 09:19:46  INFO: Memory limit heap: 121mb non-heap: 0mb
+2023-06-13 09:19:46  INFO: Character encoding: UTF-8 charset: UTF-8
+2023-06-13 09:19:46  INFO: Version: 5.8
+2023-06-13 09:19:46  INFO: Starting server...
+2023-06-13 09:19:46  INFO: HikariPool-1 - Starting...
+2023-06-13 09:19:47  INFO: HikariPool-1 - Added connection conn0: url=jdbc:h2:./data/database user=SA
+2023-06-13 09:19:47  INFO: HikariPool-1 - Start completed.
+2023-06-13 09:19:48  INFO: Set default schema name to PUBLIC
+2023-06-13 09:19:48  INFO: Clearing database change log checksums
+2023-06-13 09:19:48  INFO: Successfully acquired change log lock
+2023-06-13 09:19:48  INFO: Successfully released change log lock
+2023-06-13 09:19:48  INFO: Successfully acquired change log lock
+2023-06-13 09:19:51  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 09:19:51  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 09:19:51  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 09:19:51  INFO: UPDATE SUMMARY
+2023-06-13 09:19:51  INFO: Run:                          0
+2023-06-13 09:19:51  INFO: Previously run:              43
+2023-06-13 09:19:51  INFO: Filtered out:                 0
+2023-06-13 09:19:51  INFO: -------------------------------
+2023-06-13 09:19:51  INFO: Total change sets:           43
+
+2023-06-13 09:19:51  INFO: Update summary generated
+2023-06-13 09:19:51  INFO: Successfully released change log lock
+2023-06-13 09:19:51  INFO: Successfully released change log lock
+2023-06-13 09:19:51  INFO: Command execution complete
+2023-06-13 09:19:54  INFO: jetty-10.0.15; built: 2023-04-11T17:25:14.480Z; git: 68017dbd00236bb7e187330d7585a059610f661d; jvm 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 09:19:54  INFO: Started o.t.w.@655203e3{/,null,AVAILABLE}
+2023-06-13 09:19:54  INFO: Session workerName=node0
+2023-06-13 09:19:55  WARN: JAXBContext implementation could not be found. WADL feature is disabled.
+2023-06-13 09:19:56  INFO: Started o.e.j.s.ServletContextHandler@15ad5acb{/,null,AVAILABLE}
+2023-06-13 09:19:56  INFO: Started ServerConnector@4703c998{HTTP/1.1, (http/1.1)}{0.0.0.0:8082}
+2023-06-13 09:19:56  INFO: Started Server@5d829ef0{STARTING}[10.0.15,sto=0] @11502ms
+2023-06-13 09:50:16  INFO: Operating system name: Linux version: 5.10.0-21-cloud-amd64 architecture: amd64
+2023-06-13 09:50:16  INFO: Java runtime name: OpenJDK 64-Bit Server VM vendor: Debian version: 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 09:50:16  INFO: Memory limit heap: 121mb non-heap: 0mb
+2023-06-13 09:50:16  INFO: Character encoding: UTF-8 charset: UTF-8
+2023-06-13 09:50:16  INFO: Version: 5.8
+2023-06-13 09:50:16  INFO: Starting server...
+2023-06-13 09:50:17  INFO: HikariPool-1 - Starting...
+2023-06-13 09:50:18  INFO: HikariPool-1 - Added connection conn0: url=jdbc:h2:./data/database user=SA
+2023-06-13 09:50:18  INFO: HikariPool-1 - Start completed.
+2023-06-13 09:50:18  INFO: Set default schema name to PUBLIC
+2023-06-13 09:50:18  INFO: Clearing database change log checksums
+2023-06-13 09:50:18  INFO: Successfully acquired change log lock
+2023-06-13 09:50:19  INFO: Successfully released change log lock
+2023-06-13 09:50:19  INFO: Successfully acquired change log lock
+2023-06-13 09:50:21  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 09:50:21  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 09:50:21  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 09:50:21  INFO: UPDATE SUMMARY
+2023-06-13 09:50:21  INFO: Run:                          0
+2023-06-13 09:50:21  INFO: Previously run:              43
+2023-06-13 09:50:21  INFO: Filtered out:                 0
+2023-06-13 09:50:21  INFO: -------------------------------
+2023-06-13 09:50:21  INFO: Total change sets:           43
+
+2023-06-13 09:50:21  INFO: Update summary generated
+2023-06-13 09:50:21  INFO: Successfully released change log lock
+2023-06-13 09:50:21  INFO: Successfully released change log lock
+2023-06-13 09:50:21  INFO: Command execution complete
+2023-06-13 09:50:25  INFO: jetty-10.0.15; built: 2023-04-11T17:25:14.480Z; git: 68017dbd00236bb7e187330d7585a059610f661d; jvm 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 09:50:25  INFO: Started o.t.w.@655203e3{/,null,AVAILABLE}
+2023-06-13 09:50:25  INFO: Session workerName=node0
+2023-06-13 09:50:26  WARN: JAXBContext implementation could not be found. WADL feature is disabled.
+2023-06-13 09:50:26  INFO: Started o.e.j.s.ServletContextHandler@15ad5acb{/,null,AVAILABLE}
+2023-06-13 09:50:26  INFO: Started ServerConnector@4703c998{HTTP/1.1, (http/1.1)}{0.0.0.0:8082}
+2023-06-13 09:50:26  INFO: Started Server@5d829ef0{STARTING}[10.0.15,sto=0] @12519ms
+2023-06-13 10:07:28  INFO: Operating system name: Linux version: 5.10.0-21-cloud-amd64 architecture: amd64
+2023-06-13 10:07:28  INFO: Java runtime name: OpenJDK 64-Bit Server VM vendor: Debian version: 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 10:07:28  INFO: Memory limit heap: 121mb non-heap: 0mb
+2023-06-13 10:07:28  INFO: Character encoding: UTF-8 charset: UTF-8
+2023-06-13 10:07:28  INFO: Version: 5.8
+2023-06-13 10:07:28  INFO: Starting server...
+2023-06-13 10:07:29  INFO: HikariPool-1 - Starting...
+2023-06-13 10:07:30  INFO: HikariPool-1 - Added connection conn0: url=jdbc:h2:./data/database user=SA
+2023-06-13 10:07:30  INFO: HikariPool-1 - Start completed.
+2023-06-13 10:07:30  INFO: Set default schema name to PUBLIC
+2023-06-13 10:07:30  INFO: Clearing database change log checksums
+2023-06-13 10:07:31  INFO: Successfully acquired change log lock
+2023-06-13 10:07:31  INFO: Successfully released change log lock
+2023-06-13 10:07:31  INFO: Successfully acquired change log lock
+2023-06-13 10:07:33  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 10:07:34  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 10:07:34  INFO: Reading from PUBLIC.DATABASECHANGELOG
+2023-06-13 10:07:34  INFO: UPDATE SUMMARY
+2023-06-13 10:07:34  INFO: Run:                          0
+2023-06-13 10:07:34  INFO: Previously run:              43
+2023-06-13 10:07:34  INFO: Filtered out:                 0
+2023-06-13 10:07:34  INFO: -------------------------------
+2023-06-13 10:07:34  INFO: Total change sets:           43
+
+2023-06-13 10:07:34  INFO: Update summary generated
+2023-06-13 10:07:34  INFO: Successfully released change log lock
+2023-06-13 10:07:34  INFO: Successfully released change log lock
+2023-06-13 10:07:34  INFO: Command execution complete
+2023-06-13 10:07:37  INFO: jetty-10.0.15; built: 2023-04-11T17:25:14.480Z; git: 68017dbd00236bb7e187330d7585a059610f661d; jvm 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 10:07:37  INFO: Started o.t.w.@655203e3{/,null,AVAILABLE}
+2023-06-13 10:07:37  INFO: Session workerName=node0
+2023-06-13 10:07:38  WARN: JAXBContext implementation could not be found. WADL feature is disabled.
+2023-06-13 10:07:39  INFO: Started o.e.j.s.ServletContextHandler@15ad5acb{/,null,AVAILABLE}
+2023-06-13 10:07:39  INFO: Started ServerConnector@4703c998{HTTP/1.1, (http/1.1)}{0.0.0.0:8082}
+2023-06-13 10:07:39  INFO: Started Server@5d829ef0{STARTING}[10.0.15,sto=0] @12472ms
+2023-06-13 10:09:10  INFO: Operating system name: Linux version: 5.10.0-21-cloud-amd64 architecture: amd64
+2023-06-13 10:09:10  INFO: Java runtime name: OpenJDK 64-Bit Server VM vendor: Debian version: 11.0.18+10-post-Debian-1deb11u1
+2023-06-13 10:09:10  INFO: Memory limit heap: 121mb non-heap: 0mb
+2023-06-13 10:09:10  INFO: Character encoding: UTF-8 charset: UTF-8
+2023-06-13 10:09:10  INFO: Version: 5.8
+2023-06-13 10:09:10  INFO: Starting server...
+2023-06-13 10:09:10  INFO: HikariPool-1 - Starting...
+2023-06-13 10:09:12 ERROR: HikariPool-1 - Exception during pool initialization. - The file is locked: /home/bitnami/traccar-other-5.8/data/database.mv.db [2.1.214/7] - MVStoreException (... < DatabaseModule:79 < <gener:-1 < *:-1 < ... < MainModule:123 < ...)
+2023-06-13 10:09:12 ERROR: Main method error - The file is locked: /home/bitnami/traccar-other-5.8/data/database.mv.db [2.1.214/7] - MVStoreException (... < DatabaseModule:79 < <gener:-1 < *:-1 < ... < MainModule:123 < ...)
+2023-06-13 12:22:38  INFO: user: 1, action: login, from: 134.108.254.158
+2023-06-13 12:25:17  INFO: user: 1, action: create, object: device, id: 1
+2023-06-13 12:25:17  INFO: user: 1, action: link, owner: user, id: 1, property: device, id: 1
+2023-06-13 12:28:22  INFO: [Tb19dac19] connected
+2023-06-13 12:28:26  INFO: [Tb19dac19: tramigo < 213.137.138.124] 80000100c0001c0001010000011d4d9ae860886470696e6720454f46
+2023-06-13 12:28:26  WARN: Unknown device - 18697626 (213.137.138.124)
+2023-06-13 12:28:49  INFO: [Tb19dac19: tramigo < 213.137.138.124] 80000200c0001c0001010000011d4d9aff60886470696e6720454f46
+2023-06-13 12:28:49  WARN: Unknown device - 18697626 (213.137.138.124)
+2023-06-13 12:29:12  INFO: [Tb19dac19: tramigo < 213.137.138.124] 80000300c0001c0001010000011d4d9a1661886470696e6720454f46
+2023-06-13 12:29:12  WARN: Unknown device - 18697626 (213.137.138.124)
+2023-06-13 12:29:36  INFO: [Tb19dac19: tramigo < 213.137.138.124] 2b2b2b
+2023-06-13 12:30:11  INFO: [Tb19dac19] disconnected
+2023-06-13 12:30:18  INFO: [Tcb25459e] connected
+2023-06-13 12:30:24  INFO: [Tcb25459e: tramigo < 213.137.138.99] 80000400c0001c0001010000011d4d9a5e61886470696e6720454f46
+2023-06-13 12:30:24  WARN: Unknown device - 18697626 (213.137.138.99)
+2023-06-13 12:30:48  INFO: [Tcb25459e: tramigo < 213.137.138.99] 80000500c0001c0001010000011d4d9a7561886470696e6720454f46
+2023-06-13 12:30:48  WARN: Unknown device - 18697626 (213.137.138.99)
+2023-06-13 12:31:11  INFO: [Tcb25459e: tramigo < 213.137.138.99] 80000600c0001c0001010000011d4d9a8c61886470696e6720454f46
+2023-06-13 12:31:11  WARN: Unknown device - 18697626 (213.137.138.99)
+2023-06-13 12:31:35  INFO: [Tcb25459e: tramigo < 213.137.138.99] 2b2b2b
+2023-06-13 12:32:41  INFO: [Tcb25459e] disconnected
+2023-06-13 12:32:48  INFO: [T82ff8a6d] connected
+2023-06-13 12:32:54  INFO: [T82ff8a6d: tramigo < 213.137.138.79] 80000700c0001c0001010000011d4d9af461886470696e6720454f46
+2023-06-13 12:32:54  WARN: Unknown device - 18697626 (213.137.138.79)
+2023-06-13 12:33:19  INFO: [T82ff8a6d: tramigo < 213.137.138.79] 80000800c0001c0001010000011d4d9a0b62886470696e6720454f46
+2023-06-13 12:33:19  WARN: Unknown device - 18697626 (213.137.138.79)
+2023-06-13 12:33:40  INFO: [T82ff8a6d: tramigo < 213.137.138.79] 80000900c0001c0001010000011d4d9a2262886470696e6720454f46
+2023-06-13 12:33:40  WARN: Unknown device - 18697626 (213.137.138.79)
+2023-06-13 12:34:04  INFO: [T82ff8a6d: tramigo < 213.137.138.79] 2b2b2b
+2023-06-13 12:35:42  INFO: [T82ff8a6d] disconnected
+2023-06-13 12:35:48  INFO: [Te7d2b113] connected
+2023-06-13 12:35:56  INFO: [Te7d2b113: tramigo < 213.137.138.121] 80000a00c0001c0001010000011d4d9aa862886470696e6720454f46
+2023-06-13 12:35:56  WARN: Unknown device - 18697626 (213.137.138.121)
+2023-06-13 12:36:17  INFO: [Te7d2b113: tramigo < 213.137.138.121] 80000b00c0001c0001010000011d4d9abf62886470696e6720454f46
+2023-06-13 12:36:17  WARN: Unknown device - 18697626 (213.137.138.121)
+2023-06-13 12:36:42  INFO: [Te7d2b113: tramigo < 213.137.138.121] 80000c00c0001c0001010000011d4d9ad662886470696e6720454f46
+2023-06-13 12:36:42  WARN: Unknown device - 18697626 (213.137.138.121)
+2023-06-13 12:37:05  INFO: [Te7d2b113: tramigo < 213.137.138.121] 2b2b2b
+2023-06-13 12:39:11  INFO: [Te7d2b113] disconnected
+2023-06-13 12:39:17  INFO: [Tabde661b] connected
+2023-06-13 12:39:24  INFO: [Tabde661b: tramigo < 213.137.138.104] 80000d00c0001c0001010000011d4d9a7a63886470696e6720454f46
+2023-06-13 12:39:24  WARN: Unknown device - 18697626 (213.137.138.104)
+2023-06-13 12:39:47  INFO: [Tabde661b: tramigo < 213.137.138.104] 80000e00c0001c0001010000011d4d9a9063886470696e6720454f46
+2023-06-13 12:39:47  WARN: Unknown device - 18697626 (213.137.138.104)
+2023-06-13 12:40:10  INFO: [Tabde661b: tramigo < 213.137.138.104] 80000f00c0001c0001010000011d4d9aa863886470696e6720454f46
+2023-06-13 12:40:10  WARN: Unknown device - 18697626 (213.137.138.104)
+2023-06-13 12:40:34  INFO: [Tabde661b: tramigo < 213.137.138.104] 2b2b2b
+2023-06-13 12:43:10  INFO: [Tabde661b] disconnected
+2023-06-13 12:43:16  INFO: [T58937724] connected
+2023-06-13 12:43:23  INFO: [T58937724: tramigo < 213.137.138.97] 80001000c0001c0001010000011d4d9a6864886470696e6720454f46
+2023-06-13 12:43:23  WARN: Unknown device - 18697626 (213.137.138.97)
+2023-06-13 12:43:46  INFO: [T58937724: tramigo < 213.137.138.97] 80001100c0001c0001010000011d4d9a8064886470696e6720454f46
+2023-06-13 12:43:46  WARN: Unknown device - 18697626 (213.137.138.97)
+2023-06-13 12:44:09  INFO: [T58937724: tramigo < 213.137.138.97] 80001200c0001c0001010000011d4d9a9864886470696e6720454f46
+2023-06-13 12:44:09  WARN: Unknown device - 18697626 (213.137.138.97)
+2023-06-13 12:44:33  INFO: [T58937724: tramigo < 213.137.138.97] 2b2b2b
+2023-06-13 12:47:39  INFO: [T58937724] disconnected
+2023-06-13 12:47:46  INFO: [T86cc76ba] connected
+2023-06-13 12:47:54  INFO: [T86cc76ba: tramigo < 213.137.138.97] 80001300c0001c0001010000011d4d9a7665886470696e6720454f46
+2023-06-13 12:47:54  WARN: Unknown device - 18697626 (213.137.138.97)
+2023-06-13 12:48:15  INFO: [T86cc76ba: tramigo < 213.137.138.97] 80001400c0001c0001010000011d4d9a8e65886470696e6720454f46
+2023-06-13 12:48:15  WARN: Unknown device - 18697626 (213.137.138.97)
+2023-06-13 12:48:36  INFO: user: 1, action: logout, from: 134.108.254.158
+2023-06-13 12:48:38  INFO: [T86cc76ba: tramigo < 213.137.138.97] 80001500c0001c0001010000011d4d9aa465886470696e6720454f46
+2023-06-13 12:48:38  WARN: Unknown device - 18697626 (213.137.138.97)
+2023-06-13 12:49:03  INFO: [T86cc76ba: tramigo < 213.137.138.97] 2b2b2b
+2023-06-13 12:51:20  INFO: user: 1, action: login, from: 134.108.254.158
+2023-06-13 12:52:39  INFO: [T86cc76ba] disconnected
+2023-06-13 12:52:46  INFO: [T01b965fa] connected
+2023-06-13 12:52:52  INFO: [T01b965fa: tramigo < 213.137.138.109] 80001600c0001c0001010000011d4d9aa266886470696e6720454f46
+2023-06-13 12:52:52  WARN: Unknown device - 18697626 (213.137.138.109)
+2023-06-13 12:53:15  INFO: [T01b965fa: tramigo < 213.137.138.109] 80001700c0001c0001010000011d4d9ab966886470696e6720454f46
+2023-06-13 12:53:15  WARN: Unknown device - 18697626 (213.137.138.109)
+2023-06-13 12:53:38  INFO: [T01b965fa: tramigo < 213.137.138.109] 80001800c0001c0001010000011d4d9ad066886470696e6720454f46
+2023-06-13 12:53:38  WARN: Unknown device - 18697626 (213.137.138.109)
+2023-06-13 12:54:02  INFO: [T01b965fa: tramigo < 213.137.138.109] 2b2b2b
+2023-06-13 12:58:18  INFO: [T01b965fa] disconnected
+2023-06-13 12:58:26  INFO: [T2f2d7c28] connected
+2023-06-13 12:58:28  INFO: [T2f2d7c28: tramigo < 213.137.138.123] 80001900c0001c0001010000011d4d9af167886470696e6720454f46
+2023-06-13 12:58:30  WARN: Unknown device - 18697626 (213.137.138.123)
+2023-06-13 12:58:51  INFO: [T2f2d7c28: tramigo < 213.137.138.123] 80001a00c0001c0001010000011d4d9a0868886470696e6720454f46
+2023-06-13 12:58:51  WARN: Unknown device - 18697626 (213.137.138.123)
+2023-06-13 12:59:19  INFO: [T2f2d7c28: tramigo < 213.137.138.123] 80001b00c0001c0001010000011d4d9a2068886470696e6720454f46
+2023-06-13 12:59:19  WARN: Unknown device - 18697626 (213.137.138.123)
+2023-06-13 12:59:38  INFO: [T2f2d7c28: tramigo < 213.137.138.123] 2b2b2b
+2023-06-13 13:04:14  INFO: [T2f2d7c28] disconnected
+2023-06-13 13:04:22  INFO: [T79ccd876] connected
+2023-06-13 13:04:28  INFO: [T79ccd876: tramigo < 213.137.138.107] 80001c00c0001c0001010000011d4d9a5a69886470696e6720454f46
+2023-06-13 13:04:28  WARN: Unknown device - 18697626 (213.137.138.107)
+2023-06-13 13:04:52  INFO: [T79ccd876: tramigo < 213.137.138.107] 80001d00c0001c0001010000011d4d9a7269886470696e6720454f46
+2023-06-13 13:04:52  WARN: Unknown device - 18697626 (213.137.138.107)
+2023-06-13 13:05:14  INFO: [T79ccd876: tramigo < 213.137.138.107] 80001e00c0001c0001010000011d4d9a8969886470696e6720454f46
+2023-06-13 13:05:14  WARN: Unknown device - 18697626 (213.137.138.107)
+2023-06-13 13:05:39  INFO: [T79ccd876: tramigo < 213.137.138.107] 2b2b2b
+2023-06-13 13:10:47  INFO: [T79ccd876] disconnected
+2023-06-13 13:10:55  INFO: [T588235f9] connected
+2023-06-13 13:11:01  INFO: [T588235f9: tramigo < 213.137.138.127] 80001f00c0001c0001010000011d4d9ae26a886470696e6720454f46
+2023-06-13 13:11:01  WARN: Unknown device - 18697626 (213.137.138.127)
+2023-06-13 13:11:24  INFO: [T588235f9: tramigo < 213.137.138.127] 80002000c0001c0001010000011d4d9af96a886470696e6720454f46
+2023-06-13 13:11:24  WARN: Unknown device - 18697626 (213.137.138.127)
+2023-06-13 13:11:47  INFO: [T588235f9: tramigo < 213.137.138.127] 80002100c0001c0001010000011d4d9a106b886470696e6720454f46
+2023-06-13 13:11:47  WARN: Unknown device - 18697626 (213.137.138.127)
+2023-06-13 13:12:11  INFO: [T588235f9: tramigo < 213.137.138.127] 2b2b2b
+2023-06-13 13:54:36  INFO: [T113ff93d] connected
+2023-06-13 13:54:43  INFO: [T113ff93d: tramigo < 213.137.138.121] 0464004957220053301c021ab784005b698864003200380e00008400e45d4a000d360e0000005c004d3f090000000000007e00930100005a69886400012800000000000000000013000000020044454573736c696e67656e20416d204e65636b61724445
+2023-06-13 13:54:44  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:04:26, lat: 48.73700, lon: 9.31341, course: 92.0
+2023-06-13 13:54:44  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418007a68220053301c021ab784005b698864ff22000000
+2023-06-13 13:54:46  INFO: [T113ff93d: tramigo < 213.137.138.121] 04860084a6230053301c021ab78400be436d38000000000000008500e35d4a0008360e00000062005a00090000000000007e0091010000bd436d38001400000000000000000e000000dd0dbe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000002400
+2023-06-13 13:54:46  INFO: [T113ff93d] id: 354018118697626, time: 2000-01-01 00:01:01, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:54:46  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800ad00230053301c021ab78400be436d38ff23000000
+2023-06-13 13:54:49  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600a882240053301c021ab784008d6d8864000000000000008400e35d4a0008360e000000620057000600000a0010007e00910100008c6d8864001400000000000000000e000000150ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000e00
+2023-06-13 13:54:49  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:22:20, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:54:49  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800934d240053301c021ab784008d6d8864ff24000000
+2023-06-13 13:54:51  INFO: [T113ff93d: tramigo < 213.137.138.121] 04640077fc250053301c021ab78400636d8864000000000000008400e35d4a0008360e000000620057000700000a0010007e0091010000626d886400012800000000000000000013000000020044454573736c696e67656e20416d204e65636b61724445
+2023-06-13 13:54:51  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:21:38, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:54:51  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800d8d1250053301c021ab78400636d8864ff25000000
+2023-06-13 13:54:54  INFO: [T113ff93d: tramigo < 213.137.138.121] 0486001f77260053301c021ab78400536d8864000000000000008400e35d4a0008360e000000620057000700000a0010007e0091010000526d8864001400000000000000000e000000150ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000e00
+2023-06-13 13:54:54  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:21:22, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:54:54  INFO: [T113ff93d: tramigo > 213.137.138.121] 04180006cc260053301c021ab78400536d8864ff26000000
+2023-06-13 13:54:56  INFO: [T113ff93d: tramigo < 213.137.138.121] 0486000baf270053301c021ab78400146d8864000000000000008400e35d4a0008360e000000620057000700000a0010007e0091010000136d8864001400000000000000000e000000240ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000e00
+2023-06-13 13:54:56  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:20:19, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:54:56  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800df8a270053301c021ab78400146d8864ff27000000
+2023-06-13 13:54:58  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600fcf1280053301c021ab78400db6c8864000000000000008400e35d4a0008360e000000620057000700000a0010007e0091010000da6c8864001400000000000000000e0000002d0ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000d00
+2023-06-13 13:54:58  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:19:22, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:54:58  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800fccb280053301c021ab78400db6c8864ff28000000
+2023-06-13 13:55:00  INFO: [T113ff93d: tramigo < 213.137.138.121] 0486000695290053301c021ab784009c6c8864000000000000008400e35d4a0008360e000000620050000700000a0010007e00910100009b6c8864001400000000000000000e0000003b0ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000d00
+2023-06-13 13:55:00  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:18:19, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:55:00  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800258d290053301c021ab784009c6c8864ff29000000
+2023-06-13 13:55:01  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600d12f2a0053301c021ab78400626c8864000000000000008400e35d4a0008360e000000620050000800000a0010007e0091010000616c8864001400000000000000000e000000320ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000d00
+2023-06-13 13:55:01  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:17:21, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:55:01  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800e7032a0053301c021ab78400626c8864ff2a000000
+2023-06-13 13:55:03  INFO: [T113ff93d: tramigo < 213.137.138.121] 04640047132b0053301c021ab78400386c8864000000000000008400e35d4a0008360e000000620050000800000a0010007e0091010000376c886400012800000000000000000013000000020044454573736c696e67656e20416d204e65636b61724445
+2023-06-13 13:55:03  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:16:39, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:55:03  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800f3482b0053301c021ab78400386c8864ff2b000000
+2023-06-13 13:55:04  INFO: [T113ff93d: tramigo < 213.137.138.121] 0486002b492c0053301c021ab78400246c8864000000000000008400e35d4a0008360e000000620050000800000a0010007e0091010000236c8864001400000000000000000e0000003b0ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000c00
+2023-06-13 13:55:04  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:16:19, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:55:04  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418002fc52c0053301c021ab78400246c8864ff2c000000
+2023-06-13 13:55:05  INFO: [T113ff93d: tramigo < 213.137.138.121] 0486003e712d0053301c021ab78400ea6b8864000000000000008400e35d4a0008360e000000620050000800000a0010007e0091010000e96b8864001400000000000000000e000000490ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000c00
+2023-06-13 13:55:06  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:15:21, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:55:06  INFO: [T113ff93d: tramigo > 213.137.138.121] 04180080392d0053301c021ab78400ea6b8864ff2d000000
+2023-06-13 13:55:07  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600744c2e0053301c021ab78400ab6b8864000000000000008400e35d4a0008360e000000620050000800000a0010007e0091010000aa6b8864001400000000000000000e000000580ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000e00
+2023-06-13 13:55:07  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:14:18, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:55:07  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800a6642e0053301c021ab78400ab6b8864ff2e000000
+2023-06-13 13:55:09  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600f4f22f0053301c021ab78400716b8864000000000000008400e35d4a0008360e000000620050000900000a0010007e0091010000706b8864001400000000000000000e000000660ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000d00
+2023-06-13 13:55:09  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:13:20, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:55:09  INFO: [T113ff93d: tramigo > 213.137.138.121] 04180000902f0053301c021ab78400716b8864ff2f000000
+2023-06-13 13:55:10  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600fa2b300053301c021ab78400386b8864000000000000008400e35d4a0008360e000000620050000900000a0010007e0091010000376b8864001400000000000000000e0000007d0ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000e00
+2023-06-13 13:55:10  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:12:23, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:55:10  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418003058300053301c021ab78400386b8864ff30000000
+2023-06-13 13:55:11  INFO: [T113ff93d: tramigo < 213.137.138.121] 0464000de1310053301c021ab784000e6b8864000000000000008400e35d4a0008360e000000620050000900000a0010007e00910100000d6b886400012800000000000000000013000000020044454573736c696e67656e20416d204e65636b61724445
+2023-06-13 13:55:11  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:11:41, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:55:11  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800115e310053301c021ab784000e6b8864ff31000000
+2023-06-13 13:55:13  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600c254320053301c021ab78400f96a8864000000000000008400e35d4a0008360e000000620050000900000a0010007e0091010000f86a8864001400000000000000000e000000950ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000e00
+2023-06-13 13:55:13  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:11:20, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:55:13  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800dc55320053301c021ab78400f96a8864ff32000000
+2023-06-13 13:55:14  INFO: [T113ff93d: tramigo < 213.137.138.121] 0486007a64330053301c021ab78400c06a8864000000000000008400e35d4a0008360e000000620050000900000a0010007e0091010000bf6a8864001400000000000000000e000000ad0ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000001300
+2023-06-13 13:55:14  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:10:23, lat: 48.73699, lon: 9.31336, course: 98.0
+2023-06-13 13:55:14  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800a9cb330053301c021ab78400c06a8864ff33000000
+2023-06-13 13:55:16  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600e6c2340053301c021ab78400806a8864000000000000008400e85d4a00d7350e0000004f004d00090000150015008100710100007f6a8864001400000000000000000e000000b20ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000001400
+2023-06-13 13:55:16  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:09:19, lat: 48.73704, lon: 9.31287, course: 79.0
+2023-06-13 13:55:16  INFO: [T113ff93d: tramigo > 213.137.138.121] 04180042ff340053301c021ab78400806a8864ff34000000
+2023-06-13 13:55:17  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600e37a350053301c021ab78400476a8864000000000000008400e45d4a00ed350e0000000101503e09000019001900800080010000476a8864001400000000000000000e000000b20ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000001500
+2023-06-13 13:55:17  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:08:23, lat: 48.73700, lon: 9.31309, course: 257.0
+2023-06-13 13:55:17  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418002906350053301c021ab78400476a8864ff35000000
+2023-06-13 13:55:19  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600c794360053301c021ab78400086a8864000000000000008400de5d4a0013360e0000002a004d39090000130013007e009b010000086a8864001400000000000000000e000000bb0ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000001500
+2023-06-13 13:55:19  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:07:20, lat: 48.73694, lon: 9.31347, course: 42.0
+2023-06-13 13:55:19  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418007828360053301c021ab78400086a8864ff36000000
+2023-06-13 13:55:20  INFO: [T113ff93d: tramigo < 213.137.138.121] 046400a9fc370053301c021ab78400e3698864000000000000008000d85d4a0006360e0000007c004d3d09000011001500800097010000e369886400012800000000000000000013000000020044454573736c696e67656e20416d204e65636b61724445
+2023-06-13 13:55:20  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:06:43, lat: 48.73688, lon: 9.31334, course: 124.0
+2023-06-13 13:55:20  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418008a0b370053301c021ab78400e3698864ff37000000
+2023-06-13 13:55:21  INFO: [T113ff93d: tramigo < 213.137.138.121] 0486001b44380053301c021ab78400ce698864000000000000008000da5d4a00fb350e0000006b004d3d09000015001a0080008f010000ce698864001400000000000000000e000000b20ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000001400
+2023-06-13 13:55:21  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:06:22, lat: 48.73690, lon: 9.31323, course: 107.0
+2023-06-13 13:55:21  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418008a8c380053301c021ab78400ce698864ff38000000
+2023-06-13 13:55:23  INFO: [T113ff93d: tramigo < 213.137.138.121] 04860082dd390053301c021ab7840090698864000000000000008000df5d4a0011360e0005006b004d450900002b002b007e009901000090698864001400000000000000000e000000c00ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000001400
+2023-06-13 13:55:23  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:05:20, lat: 48.73695, lon: 9.31345, speed: 2.7, course: 107.0
+2023-06-13 13:55:23  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800715b390053301c021ab7840090698864ff39000000
+2023-06-13 13:55:24  INFO: [T113ff93d: tramigo < 213.137.138.121] 0486003c473a0053301c021ab7840056698864000000000000008000e45d4a000d360e0000005c004d00090000000000007e009301000055698864001400000000000000000e000000ad0ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000001500
+2023-06-13 13:55:24  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:04:21, lat: 48.73700, lon: 9.31341, course: 92.0
+2023-06-13 13:55:24  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418004e083a0053301c021ab7840056698864ff3a000000
+2023-06-13 13:55:26  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600340e3b0053301c021ab7840018698864000000000000008000e45d4a000d360e0000005c005000090000080008007e009301000017698864001400000000000000000e000000ad0ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000001400
+2023-06-13 13:55:26  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:03:19, lat: 48.73700, lon: 9.31341, course: 92.0
+2023-06-13 13:55:26  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418004b8c3b0053301c021ab7840018698864ff3b000000
+2023-06-13 13:55:27  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600b4913c0053301c021ab78400df688864000000000000008000e05d4a0031360e0000005c004d410a000001001c007c00ab010000df688864001400000000000000000e000000a30ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000001400
+2023-06-13 13:55:27  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:02:23, lat: 48.73696, lon: 9.31377, course: 92.0
+2023-06-13 13:55:27  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418006af13c0053301c021ab78400df688864ff3c000000
+2023-06-13 13:55:28  INFO: [T113ff93d: tramigo < 213.137.138.121] 04640002ee3d0053301c021ab78400b5688864000000000000008000dd5d4a000a360e00060068004d3c0a0000000000007f0096010000b568886400012800000000000000000013000000020044454573736c696e67656e20416d204e65636b61724445
+2023-06-13 13:55:28  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:01:41, lat: 48.73693, lon: 9.31338, speed: 3.2, course: 104.0
+2023-06-13 13:55:28  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418007c4e3d0053301c021ab78400b5688864ff3d000000
+2023-06-13 13:55:30  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600390f3e0053301c021ab78400a1688864000000000000008000e15d4a0010360e00050066004d000a0000000000007e0097010000a0688864001400000000000000000e000000a30ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000001300
+2023-06-13 13:55:30  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:01:20, lat: 48.73697, lon: 9.31344, speed: 2.7, course: 102.0
+2023-06-13 13:55:30  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800b1683e0053301c021ab78400a1688864ff3e000000
+2023-06-13 13:55:31  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600612c3f0053301c021ab7840068688864000000000000008000e15d4a0010360e000500660057000a0000000000007e009701000067688864001400000000000000000e000000950ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000f00
+2023-06-13 13:55:31  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 13:00:23, lat: 48.73697, lon: 9.31344, speed: 2.7, course: 102.0
+2023-06-13 13:55:31  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800ade23f0053301c021ab7840068688864ff3f000000
+2023-06-13 13:55:33  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600a7d3400053301c021ab7840029688864000000000000008000e15d4a0010360e000500660057000c0000230000007e009701000028688864001400000000000000000e000000950ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000d00
+2023-06-13 13:55:33  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 12:59:20, lat: 48.73697, lon: 9.31344, speed: 2.7, course: 102.0
+2023-06-13 13:55:33  INFO: [T113ff93d: tramigo > 213.137.138.121] 0418007efb400053301c021ab7840029688864ff40000000
+2023-06-13 13:55:35  INFO: [T113ff93d: tramigo < 213.137.138.121] 048600a667410053301c021ab78400ef678864000000000000008000e15d4a0010360e000500660057000b0000230000007e0097010000ee678864001400000000000000000e0000008c0ebe00000000000000000000000000000000002800000000000000000000000000000000000000000000000000000000000000000000000000000d00
+2023-06-13 13:55:35  INFO: [T113ff93d] id: 354018118697626, time: 2023-06-13 12:58:22, lat: 48.73697, lon: 9.31344, speed: 2.7, course: 102.0
+2023-06-13 13:55:35  INFO: [T113ff93d: tramigo > 213.137.138.121] 041800f430410053301c021ab78400ef678864ff41000000
+2023-06-13 13:55:39  INFO: [T113ff93d: tramigo < 213.137.138.121] 2b2b2b
+2023-06-13 13:57:14  INFO: [T03a5022f] connected
+2023-06-13 13:57:19  INFO: [T03a5022f: tramigo < 213.137.138.121] 80000100c0001c0001010000011d4d9abd75886470696e6720454f46
+2023-06-13 13:57:19  WARN: Unknown device - 18697626 (213.137.138.121)
+2023-06-13 13:57:42  INFO: [T03a5022f: tramigo < 213.137.138.121] 80000200c0001c0001010000011d4d9ad475886470696e6720454f46
+2023-06-13 13:57:42  WARN: Unknown device - 18697626 (213.137.138.121)
+2023-06-13 13:58:05  INFO: [T03a5022f: tramigo < 213.137.138.121] 80000300c0001c0001010000011d4d9aec75886470696e6720454f46
+2023-06-13 13:58:05  WARN: Unknown device - 18697626 (213.137.138.121)
+2023-06-13 13:58:29  INFO: [T03a5022f: tramigo < 213.137.138.121] 2b2b2b
+2023-06-13 13:59:04  INFO: [T03a5022f] disconnected
+2023-06-13 13:59:09  INFO: [Tea8a1868] connected
+2023-06-13 13:59:14  INFO: [Tea8a1868: tramigo < 213.137.138.105] 80000400c0001c0001010000011d4d9a3076886470696e6720454f46
+2023-06-13 13:59:14  WARN: Unknown device - 18697626 (213.137.138.105)
+2023-06-13 13:59:37  INFO: [Tea8a1868: tramigo < 213.137.138.105] 80000500c0001c0001010000011d4d9a4876886470696e6720454f46
+2023-06-13 13:59:37  WARN: Unknown device - 18697626 (213.137.138.105)
+2023-06-13 13:59:59  INFO: [Tea8a1868: tramigo < 213.137.138.105] 80000600c0001c0001010000011d4d9a5d76886470696e6720454f46
+2023-06-13 13:59:59  WARN: Unknown device - 18697626 (213.137.138.105)
+2023-06-13 14:00:24  INFO: [Tea8a1868: tramigo < 213.137.138.105] 2b2b2b
+2023-06-13 14:01:28  INFO: [Tea8a1868] disconnected
+2023-06-13 14:01:34  INFO: [Tb125f553] connected
+2023-06-13 14:01:39  INFO: [Tb125f553: tramigo < 213.137.138.84] 80000700c0001c0001010000011d4d9ac176886470696e6720454f46
+2023-06-13 14:01:39  WARN: Unknown device - 18697626 (213.137.138.84)
+2023-06-13 14:02:02  INFO: [Tb125f553: tramigo < 213.137.138.84] 80000800c0001c0001010000011d4d9ad976886470696e6720454f46
+2023-06-13 14:02:02  WARN: Unknown device - 18697626 (213.137.138.84)
+2023-06-13 14:02:25  INFO: [Tb125f553: tramigo < 213.137.138.84] 80000900c0001c0001010000011d4d9aee76886470696e6720454f46
+2023-06-13 14:02:25  WARN: Unknown device - 18697626 (213.137.138.84)
+2023-06-13 14:02:49  INFO: [Tb125f553: tramigo < 213.137.138.84] 2b2b2b
+2023-06-13 14:04:24  INFO: [Tb125f553] disconnected
+2023-06-13 14:04:31  INFO: [Tfa51d6c0] connected
+2023-06-13 14:04:37  INFO: [Tfa51d6c0: tramigo < 213.137.138.100] 80000a00c0001c0001010000011d4d9a7377886470696e6720454f46
+2023-06-13 14:04:37  WARN: Unknown device - 18697626 (213.137.138.100)
+2023-06-13 14:05:00  INFO: [Tfa51d6c0: tramigo < 213.137.138.100] 80000b00c0001c0001010000011d4d9a8a77886470696e6720454f46
+2023-06-13 14:05:00  WARN: Unknown device - 18697626 (213.137.138.100)
+2023-06-13 14:05:23  INFO: [Tfa51d6c0: tramigo < 213.137.138.100] 80000c00c0001c0001010000011d4d9aa177886470696e6720454f46
+2023-06-13 14:05:23  WARN: Unknown device - 18697626 (213.137.138.100)
+2023-06-13 14:05:48  INFO: [Tfa51d6c0: tramigo < 213.137.138.100] 2b2b2b
+2023-06-13 14:07:54  INFO: [Tfa51d6c0] disconnected
+2023-06-13 14:08:00  INFO: [T1c9829e2] connected
+2023-06-13 14:08:12  INFO: [T1c9829e2: tramigo < 213.137.138.79] 80000d00c0001c0001010000011d4d9a4478886470696e6720454f46
+2023-06-13 14:08:12  WARN: Unknown device - 18697626 (213.137.138.79)
+2023-06-13 14:08:29  INFO: [T1c9829e2: tramigo < 213.137.138.79] 80000e00c0001c0001010000011d4d9a5b78886470696e6720454f46
+2023-06-13 14:08:29  WARN: Unknown device - 18697626 (213.137.138.79)
+2023-06-13 14:08:53  INFO: [T1c9829e2: tramigo < 213.137.138.79] 80000f00c0001c0001010000011d4d9a7278886470696e6720454f46
+2023-06-13 14:08:53  WARN: Unknown device - 18697626 (213.137.138.79)
+2023-06-13 14:09:19  INFO: [T1c9829e2: tramigo < 213.137.138.79] 2b2b2b
+2023-06-13 14:11:53  INFO: [T1c9829e2] disconnected
+2023-06-13 14:12:01  INFO: [T567a0153] connected
+2023-06-13 14:12:07  INFO: [T567a0153: tramigo < 213.137.138.81] 80001000c0001c0001010000011d4d9a3479886470696e6720454f46
+2023-06-13 14:12:07  WARN: Unknown device - 18697626 (213.137.138.81)
+2023-06-13 14:12:30  INFO: [T567a0153: tramigo < 213.137.138.81] 80001100c0001c0001010000011d4d9a4b79886470696e6720454f46
+2023-06-13 14:12:30  WARN: Unknown device - 18697626 (213.137.138.81)
+2023-06-13 14:12:54  INFO: [T567a0153: tramigo < 213.137.138.81] 80001200c0001c0001010000011d4d9a6479886470696e6720454f46
+2023-06-13 14:12:54  WARN: Unknown device - 18697626 (213.137.138.81)
+2023-06-13 14:13:17  INFO: [T567a0153: tramigo < 213.137.138.81] 2b2b2b
+2023-06-13 14:16:43  INFO: [T567a0153] disconnected
+2023-06-13 14:16:50  INFO: [Ta5297ae5] connected
+2023-06-13 14:16:56  INFO: [Ta5297ae5: tramigo < 213.137.138.109] 80001300c0001c0001010000011d4d9a567a886470696e6720454f46
+2023-06-13 14:16:56  WARN: Unknown device - 18697626 (213.137.138.109)
+2023-06-13 14:17:19  INFO: [Ta5297ae5: tramigo < 213.137.138.109] 80001400c0001c0001010000011d4d9a6d7a886470696e6720454f46
+2023-06-13 14:17:19  WARN: Unknown device - 18697626 (213.137.138.109)
+2023-06-13 14:17:42  INFO: [Ta5297ae5: tramigo < 213.137.138.109] 80001500c0001c0001010000011d4d9a847a886470696e6720454f46
+2023-06-13 14:17:42  WARN: Unknown device - 18697626 (213.137.138.109)
+2023-06-13 14:18:06  INFO: [Ta5297ae5: tramigo < 213.137.138.109] 2b2b2b
+2023-06-13 14:21:42  INFO: [Ta5297ae5] disconnected
+2023-06-13 14:21:49  INFO: [Tb6418073] connected
+2023-06-13 14:21:55  INFO: [Tb6418073: tramigo < 213.137.138.119] 80001600c0001c0001010000011d4d9a817b886470696e6720454f46
+2023-06-13 14:21:55  WARN: Unknown device - 18697626 (213.137.138.119)
+2023-06-13 14:22:18  INFO: [Tb6418073: tramigo < 213.137.138.119] 80001700c0001c0001010000011d4d9a987b886470696e6720454f46
+2023-06-13 14:22:18  WARN: Unknown device - 18697626 (213.137.138.119)
+2023-06-13 14:22:41  INFO: [Tb6418073: tramigo < 213.137.138.119] 80001800c0001c0001010000011d4d9aaf7b886470696e6720454f46
+2023-06-13 14:22:41  WARN: Unknown device - 18697626 (213.137.138.119)
+2023-06-13 14:23:06  INFO: [Tb6418073: tramigo < 213.137.138.119] 2b2b2b
+2023-06-13 14:27:12  INFO: [Tb6418073] disconnected
+2023-06-13 14:27:19  INFO: [T92395aae] connected
+2023-06-13 14:27:25  INFO: [T92395aae: tramigo < 213.137.138.65] 80001900c0001c0001010000011d4d9acb7c886470696e6720454f46
+2023-06-13 14:27:25  WARN: Unknown device - 18697626 (213.137.138.65)
+2023-06-13 14:27:50  INFO: [T92395aae: tramigo < 213.137.138.65] 80001a00c0001c0001010000011d4d9ae47c886470696e6720454f46
+2023-06-13 14:27:50  WARN: Unknown device - 18697626 (213.137.138.65)
+2023-06-13 14:28:13  INFO: [T92395aae: tramigo < 213.137.138.65] 80001b00c0001c0001010000011d4d9afb7c886470696e6720454f46
+2023-06-13 14:28:13  WARN: Unknown device - 18697626 (213.137.138.65)
+2023-06-13 14:28:38  INFO: [T92395aae: tramigo < 213.137.138.65] 2b2b2b
+2023-06-13 14:33:14  INFO: [T92395aae] disconnected
+2023-06-13 14:33:21  INFO: [T5b239058] connected
+2023-06-13 14:33:27  INFO: [T5b239058: tramigo < 213.137.138.96] 80001c00c0001c0001010000011d4d9a357e886470696e6720454f46
+2023-06-13 14:33:27  WARN: Unknown device - 18697626 (213.137.138.96)
+2023-06-13 14:33:51  INFO: [T5b239058: tramigo < 213.137.138.96] 80001d00c0001c0001010000011d4d9a4c7e886470696e6720454f46
+2023-06-13 14:33:51  WARN: Unknown device - 18697626 (213.137.138.96)
+2023-06-13 14:34:13  INFO: [T5b239058: tramigo < 213.137.138.96] 80001e00c0001c0001010000011d4d9a637e886470696e6720454f46
+2023-06-13 14:34:13  WARN: Unknown device - 18697626 (213.137.138.96)
+2023-06-13 14:34:38  INFO: [T5b239058: tramigo < 213.137.138.96] 2b2b2b
+2023-06-13 14:39:44  INFO: [T5b239058] disconnected
+2023-06-13 14:39:51  INFO: [T37c2d5d6] connected
+2023-06-13 14:39:57  INFO: [T37c2d5d6: tramigo < 213.137.138.69] 80001f00c0001c0001010000011d4d9aba7f886470696e6720454f46
+2023-06-13 14:39:57  WARN: Unknown device - 18697626 (213.137.138.69)
+2023-06-13 14:40:20  INFO: [T37c2d5d6: tramigo < 213.137.138.69] 80002000c0001c0001010000011d4d9ad17f886470696e6720454f46
+2023-06-13 14:40:20  WARN: Unknown device - 18697626 (213.137.138.69)
+2023-06-13 14:40:43  INFO: [T37c2d5d6: tramigo < 213.137.138.69] 80002100c0001c0001010000011d4d9ae87f886470696e6720454f46
+2023-06-13 14:40:43  WARN: Unknown device - 18697626 (213.137.138.69)
+2023-06-13 14:41:07  INFO: [T37c2d5d6: tramigo < 213.137.138.69] 2b2b2b
+2023-06-13 14:46:45  INFO: [T37c2d5d6] disconnected
+2023-06-13 14:46:50  INFO: [Td848ffe8] connected
+2023-06-13 14:46:58  INFO: [Td848ffe8: tramigo < 213.137.138.104] 80002200c0001c0001010000011d4d9a5e81886470696e6720454f46
+2023-06-13 14:46:58  WARN: Unknown device - 18697626 (213.137.138.104)
+2023-06-13 14:47:19  INFO: [Td848ffe8: tramigo < 213.137.138.104] 80002300c0001c0001010000011d4d9a7581886470696e6720454f46
+2023-06-13 14:47:19  WARN: Unknown device - 18697626 (213.137.138.104)
+2023-06-13 14:47:42  INFO: [Td848ffe8: tramigo < 213.137.138.104] 80002400c0001c0001010000011d4d9a8c81886470696e6720454f46
+2023-06-13 14:47:42  WARN: Unknown device - 18697626 (213.137.138.104)
+2023-06-13 14:48:07  INFO: [Td848ffe8: tramigo < 213.137.138.104] 2b2b2b
